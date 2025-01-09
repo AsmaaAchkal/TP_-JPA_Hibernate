@@ -1,47 +1,58 @@
 # TP_-JPA_Hibernate
+
 Ce TP nous aide à pratiquer JPA avec Hibernate et Maven sous Eclipse. Il consiste en  implémentation d’une application dans laquelle on utilise les annotations @OneToOne, @ManyToOne,  @OneToMany et @ManyToMany.
 
+---
+
 ## Prérequis
- •	Java Development Kit (JDK) :  version 8 ou supérieure.
- •	Maven : pour la gestion des dépendances.
- •	Une base de données MySQL
- •	Outil de gestion de base de données (comme phpMyAdmin)
+  - **Java Development Kit (JDK)**:  version 8 ou supérieure.
+  - **Maven**: pour la gestion des dépendances.
+  - **Une base de données MySQL**
+  - **Outil de gestion de base de données** (comme phpMyAdmin)
 
-##Technologies Utilisées
- •	Java : Langage principal du projet.
- •	JPA (Java Persistence API) : Gestion des entités et mapping objet-relationnel.
- •	Hibernate : Implémentation de JPA.
- •	Maven : Gestionnaire de dépendances et de construction du projet.
- •	MySQL : Base de données utilisée.
+---
 
-##Structure du Projet
+## Technologies Utilisées
+  - **Java** : Langage principal du projet.  
+  - **JPA (Java Persistence API)** : Gestion des entités et mapping objet-relationnel.  
+  - **Hibernate** : Implémentation de JPA.  
+  - **Maven** : Gestionnaire de dépendances et de construction du projet.  
+  - **MySQL** : Base de données utilisée.  
 
-   ###Packages
+---
 
-   •	com.mavenhibernate2.OneToOne : Gère les relations OneToOne entre Personne et Professeur.
-   •	com.mavenhibernate2.OneToMany_ManyToOne : Gère les relations OneToMany et ManyToOne entre Adresse et Departement.
-   •	com.mavenhibernate2.ManyToMany : Gère les relations ManyToMany entre Etudiant et Module.
+## Structure du Projet
 
-   ###Classes Principales
+   ### Packages
 
-   •	Personne : Représente une personne.
-   •	Professeur : Représente un professeur, lié à une personne.
-   •	Adresse : Représente une adresse pouvant avoir plusieurs départements.
-   •	Departement : Représente un département associé à une adresse.
-   •	Etudiant : Représente un étudiant inscrit dans plusieurs modules.
-   •	Module : Représente un module suivi par plusieurs étudiants.
+   -	'com.mavenhibernate2.OneToOne' : Gère les relations 'OneToOne' entre **Personne** et **Professeur**.
+   -	'com.mavenhibernate2.OneToMany_ManyToOne' : Gère les relations 'OneToMany' et 'ManyToOne' entre **Adresse** et **Departement**.
+   -	'com.mavenhibernate2.ManyToMany' : Gère les relations 'ManyToMany' entre **Etudiant** et **Module**.
 
-##Explications des Relations
-  •	OneToOne : Relation entre Personne et Professeur.
+---
+
+   ### Classes Principales
+
+   - **Personne** : Représente une personne.  
+   - **Professeur** : Représente un professeur, lié à une personne.  
+   - **Adresse** : Représente une adresse pouvant avoir plusieurs départements.  
+   - **Departement** : Représente un département associé à une adresse.  
+   - **Etudiant** : Représente un étudiant inscrit dans plusieurs modules.  
+   - **Module** : Représente un module suivi par plusieurs étudiants.
+
+ ---
+
+ ## Explications des Relations
+  -	**OneToOne** : Relation entre **Personne** et **Professeur**.
       -	Une personne peut être associée à un professeur.
-  •	OneToMany / ManyToOne : Relation entre Adresse et Departement.
+  - **OneToMany / ManyToOne** : Relation entre **Adresse** et **Departement**.
       -	Une adresse peut avoir plusieurs départements.
       -	Un département appartient à une seule adresse.
-  •	ManyToMany : Relation entre Etudiant et Module.
+  -	**ManyToMany** : Relation entre **Etudiant** et **Module**.
       -	Un étudiant peut être inscrit dans plusieurs modules.
       -	Un module peut être suivi par plusieurs étudiants.
 
-##Installation Exécution du Projet
+## Installation Exécution du Projet
    
    1. Clonez le projet 
 
@@ -71,16 +82,18 @@ Ce TP nous aide à pratiquer JPA avec Hibernate et Maven sous Eclipse. Il consis
               
   3. Importez le projet dans votre IDE (comme IntelliJ IDEA ou Eclipse).
 
-  4. Utilisez Maven pour compiler le projet : 'mvn clean install'
+  4. Utilisez Maven pour compiler le projet :
+     '''bash
+     mvn clean install
 
-  5. Lancez le fichier Main correspondant à la relation que vous souhaitez tester 
+  6. Lancez le fichier Main correspondant à la relation que vous souhaitez tester 
 
-  6. Vérifiez les données générées dans votre base de données : 
+  7. Vérifiez les données générées dans votre base de données : 
       •	Tables : personne, professeur, adresse, departement, etudiant, module.
       •	Relations créées automatiquement (ex. : etudiant_module pour ManyToMany).
 
-##Résultats
+## Résultats
 Après exécution :
-  •	Les relations entre les entités sont correctement établies dans la base de données.
-  •	Les données persistées sont visibles via un outil de gestion de base de données.
+  - Les relations entre les entités sont correctement établies dans la base de données.
+  - Les données persistées sont visibles via un outil de gestion de base de données.
 
