@@ -1,7 +1,7 @@
 # TP_-JPA_Hibernate
 Ce TP nous aide à pratiquer JPA avec Hibernate et Maven sous Eclipse. Il consiste en  implémentation d’une application dans laquelle on utilise les annotations @OneToOne, @ManyToOne,  @OneToMany et @ManyToMany.
 
-##Prérequis
+## Prérequis
  •	Java Development Kit (JDK) :  version 8 ou supérieure.
  •	Maven : pour la gestion des dépendances.
  •	Une base de données MySQL
