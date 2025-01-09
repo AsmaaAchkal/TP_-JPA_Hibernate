@@ -56,7 +56,7 @@ Ce TP a pour objectif de pratiquer JPA avec Hibernate et Maven sous Eclipse. Il 
    
    1. Clonez le projet:  Clonez le projet dans votre environnement local.
    2. Importez le projet dans votre IDE (comme IntelliJ IDEA ou Eclipse).
-   3.Configurez la connexion à la base de données dans le fichier `persistence.xml` situé dans le dossier `src/main/resources/META-INF` :
+   3. Configurez la connexion à la base de données dans le fichier `persistence.xml` situé dans le dossier `src/main/resources/META-INF` :
 
     '''xml
     <persistence xmlns="http://xmlns.jcp.org/xml/ns/persistence"
@@ -86,9 +86,8 @@ Ce TP a pour objectif de pratiquer JPA avec Hibernate et Maven sous Eclipse. Il 
     '''bash
      mvn clean install
      
-   6. Lancez le fichier Main correspondant à la relation que vous souhaitez tester 
-
-   7. Vérifiez les données générées dans votre base de données : 
+   5. Lancez le fichier Main correspondant à la relation que vous souhaitez tester
+   6. Vérifiez les données générées dans votre base de données : 
       - Tables : personne, professeur, adresse, departement, etudiant, module.
       - Relations créées automatiquement (ex. : etudiant_module pour ManyToMany).
 
