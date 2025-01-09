@@ -1,6 +1,6 @@
 # TP_-JPA_Hibernate
 
-Ce TP nous aide à pratiquer JPA avec Hibernate et Maven sous Eclipse. Il consiste en  implémentation d’une application dans laquelle on utilise les annotations @OneToOne, @ManyToOne,  @OneToMany et @ManyToMany.
+Ce TP a pour objectif de pratiquer JPA avec Hibernate et Maven sous Eclipse. Il consiste en  implémentation d’une application dans laquelle on utilise les annotations @OneToOne, @ManyToOne,  @OneToMany et @ManyToMany.
 
 ---
 
@@ -54,43 +54,43 @@ Ce TP nous aide à pratiquer JPA avec Hibernate et Maven sous Eclipse. Il consis
 
 ## Installation Exécution du Projet
    
-   1. Clonez le projet 
+   1. Clonez le projet:  Clonez le projet dans votre environnement local.
+   2. Importez le projet dans votre IDE (comme IntelliJ IDEA ou Eclipse).
+   3.Configurez la connexion à la base de données dans le fichier `persistence.xml` situé dans le dossier `src/main/resources/META-INF` :
 
-   2. Configurez la connexion à la base de données dans le fichier `persistence.xml` situé dans le dossier `src/main/resources/META-INF` :
-
-'''
-<persistence xmlns="http://xmlns.jcp.org/xml/ns/persistence" version="2.1">
-    <persistence-unit name="tp5_jpa_hibernate2">
-        <class>com.mavenhibernate2.OneToOne.Professeur</class>
-        <class>com.mavenhibernate2.OneToOne.Personne</class>
-        <class>com.mavenhibernate2.OneToMany_ManyToOne.Adresse</class>
-        <class>com.mavenhibernate2.OneToMany_ManyToOne.Departement</class>
-        <class>com.mavenhibernate2.ManyToMany.Etudiant</class>
-        <class>com.mavenhibernate2.ManyToMany.Module</class>
+    '''xml
+    <persistence xmlns="http://xmlns.jcp.org/xml/ns/persistence"
+             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence
+             http://xmlns.jcp.org/xml/ns/persistence/persistence_2_1.xsd"
+             version="2.1">
+    <persistence-unit name="tp5_jpa_hibernate2" transaction-type="RESOURCE_LOCAL">
+    <provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
         <properties>
-            <property name="javax.persistence.jdbc.driver" value="com.mysql.cj.jdbc.Driver" />
-            <property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/votre_base" />
-            <property name="javax.persistence.jdbc.user" value="root" />
-            <property name="javax.persistence.jdbc.password" value="password" />
-            <property name="hibernate.dialect" value="org.hibernate.dialect.MySQL8Dialect" />
-            <property name="hibernate.hbm2ddl.auto" value="update" />
-            <property name="hibernate.show_sql" value="true" />
-            <property name="hibernate.format_sql" value="true" />
+            <!-- Configuration de BDD -->
+            <property name="javax.persistence.jdbc.driver" value="com.mysql.cj.jdbc.Driver"/>
+            <property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/jpa_hibernate2"/> <!-- remplacer 'jpa_hibernate2' par votre DB-->
+            <property name="javax.persistence.jdbc.user" value="root"/>
+            <property name="javax.persistence.jdbc.password" value=""/>
+            <!-- Configuration de hibernate -->
+            <property name="hibernate.dialect" value="org.hibernate.dialect.MySQL8Dialect"/>
+            <property name="hibernate.hbm2ddl.auto" value="update"/>
+            <property name="hibernate.show_sql" value="true"/>
+            <property name="hibernate.format_sql" value="true"/>
         </properties>
     </persistence-unit>
-</persistence>
-              
-  3. Importez le projet dans votre IDE (comme IntelliJ IDEA ou Eclipse).
+    </persistence>
 
-  4. Utilisez Maven pour compiler le projet :
-     '''bash
+   4. Utilisez Maven pour compiler le projet :
+  
+    '''bash
      mvn clean install
+     
+   6. Lancez le fichier Main correspondant à la relation que vous souhaitez tester 
 
-  6. Lancez le fichier Main correspondant à la relation que vous souhaitez tester 
-
-  7. Vérifiez les données générées dans votre base de données : 
-      •	Tables : personne, professeur, adresse, departement, etudiant, module.
-      •	Relations créées automatiquement (ex. : etudiant_module pour ManyToMany).
+   7. Vérifiez les données générées dans votre base de données : 
+      - Tables : personne, professeur, adresse, departement, etudiant, module.
+      - Relations créées automatiquement (ex. : etudiant_module pour ManyToMany).
 
 ## Résultats
 Après exécution :
