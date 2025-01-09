@@ -52,7 +52,9 @@ Ce TP a pour objectif de pratiquer JPA avec Hibernate et Maven sous Eclipse. Il 
       -	Un étudiant peut être inscrit dans plusieurs modules.
       -	Un module peut être suivi par plusieurs étudiants.
 
-## Installation Exécution du Projet
+---
+
+## Installation et Exécution du Projet
    
    1. Clonez le projet:  Clonez le projet dans votre environnement local.
    2. Importez le projet dans votre IDE (comme IntelliJ IDEA ou Eclipse).
@@ -90,6 +92,8 @@ Ce TP a pour objectif de pratiquer JPA avec Hibernate et Maven sous Eclipse. Il 
    6. Vérifiez les données générées dans votre base de données : 
       - Tables : personne, professeur, adresse, departement, etudiant, module.
       - Relations créées automatiquement (ex. : etudiant_module pour ManyToMany).
+
+---
 
 ## Résultats
 Après exécution :
